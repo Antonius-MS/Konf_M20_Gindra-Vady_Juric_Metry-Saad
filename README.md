@@ -41,6 +41,6 @@ By Valentina Juric (GitHub: valentinajuric)
 ## Features to implement for Root_Beer Class ##
 
 - Make a Root_Beer
-- Give the Root-Beer a name
+- Give the Root_Beer a name
 - State if you know this kind of beverage
-- Displpay information about the Root_Beer 
+- Displpay information about the Root_Beer
