@@ -37,3 +37,10 @@ By Antonius Metry Saad (GitHub: Antonius-MS)
 - To open the bottle use the openBottle method and it will print if it is being opened or if it is already open
 
 By Valentina Juric (GitHub: valentinajuric)
+
+## Features to implement for Root_Beer Class ##
+
+- Make a Root_Beer
+- Give the Root-Beer a name
+- State if you know this kind of beverage
+- Displpay information about the Root_Beer 
