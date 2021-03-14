@@ -40,7 +40,16 @@ By Valentina Juric (GitHub: valentinajuric)
 
 ## Features to implement for Root_Beer Class ##
 
-- Make a Root_Beer
-- Give the Root_Beer a name
+- Make a Root Beer
+- Give the Root Beer a name
 - State if you know this kind of beverage
-- Displpay information about the Root_Beer
+- Displpay information about the Root Beer
+
+## Usage of Root_Beer Class ##
+
+- Make a Root Beer with the constructor of the Root_Beer class
+- Put the Root Beer name parameter in the constructor
+- Put a boolean in the constructor that determines if you already know this kind of beverage
+- Display information about the Root Beer with the printInfo method
+
+By Gerwald Gindra-Vady (GitHub: Gerw4ld)
