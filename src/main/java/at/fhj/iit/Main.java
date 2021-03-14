@@ -3,12 +3,17 @@ package at.fhj.iit;
 public class Main {
 
     public static void main(String[] args){
+        seperatorLine();
+        Coffee blackCoffee = new Coffee("Schwarzer Kaffee", 500, 3, 0, false);
+        blackCoffee.addSugarSpoon(2);
+        System.out.println(blackCoffee);
+        seperatorLine();
+    }
 
-        Liquid l = new Liquid("Wein", 0.125, 13);
-        System.out.println(l.getName());
-        System.out.println(l.getVolume());
-
-        Drink d = new SimpleDrink("Rotwein",l);
-        System.out.println(d);
+    public static void seperatorLine(){
+        for (int i = 0; i < 100; i++) {
+            System.out.printf("-");
+        }
+        System.out.println();
     }
 }
