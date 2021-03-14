@@ -14,6 +14,11 @@ public class Main {
         Beer heineken = new Beer("Heineken", true);
         heineken.openBottle(heineken.getBottleIsClosed());
         seperatorLine();
+
+        //creates a new Root Beer object with the two passed parameters
+        Root_Beer A_and_W = new Root_Beer("AW", true);
+        A_and_W.printInfo();
+        seperatorLine();
     }
 
     public static void seperatorLine(){
