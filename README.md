@@ -29,3 +29,11 @@ By Antonius Metry Saad (GitHub: Antonius-MS)
 - Give the Beer a name
 - Give the bottle of the Beer a boolean value, either it is open (false) or closed (true)
 - Add a method to open the Beer bottle if it is not already and display when it is opened
+
+## Usage of Beer Class ##
+- Make a beer with constructor of beer class
+- Put in the beer name parameter in the constructor
+- Also put in whether the bottle is opened (false) or closed (true)
+- To open the bottle use the openBottle method and it will print if it is being opened or if it is already open
+
+By Valentina Juric (GitHub: valentinajuric)
