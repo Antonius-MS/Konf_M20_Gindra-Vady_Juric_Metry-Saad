@@ -8,6 +8,11 @@ public class Main {
         blackCoffee.addSugarSpoon(2);
         System.out.println(blackCoffee);
         seperatorLine();
+
+        //creates a new Beer Object and opens the bottle up.
+        Beer heineken = new Beer("Heineken", true);
+        heineken.openBottle(heineken.getBottleIsClosed());
+        seperatorLine();
     }
 
     public static void seperatorLine(){
