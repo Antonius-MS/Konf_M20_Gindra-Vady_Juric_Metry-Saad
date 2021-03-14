@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args){
         seperatorLine();
+        //creates a new Coffe Object with the passed parameters
         Coffee blackCoffee = new Coffee("Schwarzer Kaffee", 500, 3, 0, false);
         blackCoffee.addSugarSpoon(2);
         System.out.println(blackCoffee);

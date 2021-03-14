@@ -14,6 +14,15 @@ Konf_M20_Gindra-Vady_Juric_Metry-Saad is a drinks project from Gerwald Gindra-Va
 - Add more sugar spoons after coffee is finished
 - Display information about the coffee
 
+## Usage of Coffee Class ##
+- Make a coffee with constructor of coffee class
+- Pass the coffee name parameter in the constructor
+- Also pass following parameters to the constructor: the amount of coffee spoons, sugar spoons and if milk should be added
+- Add more sugar spoons after coffee is finished with the addSugarSpoon method
+- Display information about the coffee with the toString method
+
+By Antonius Metry Saad (GitHub: Antonius-MS)
+
 ## Features to implement for Beer Class ##
 
 - Make a beer
