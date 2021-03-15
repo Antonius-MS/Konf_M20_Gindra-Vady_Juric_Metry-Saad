@@ -53,3 +53,15 @@ By Valentina Juric (GitHub: valentinajuric)
 - Display information about the Root Beer with the printInfo method
 
 By Gerwald Gindra-Vady (GitHub: Gerw4ld)
+
+## Technologies used ##
+- IntelliJ
+- Maven
+- Git
+- GitHub
+- dillinger.io
+
+## Currently tested with ##
+
+- open project directory with IntelliJ
+- with JDK 15.0.2
