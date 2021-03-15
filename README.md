@@ -43,7 +43,7 @@ By Valentina Juric (GitHub: valentinajuric)
 - Make a Root Beer
 - Give the Root Beer a name
 - State if you know this kind of beverage
-- Displpay information about the Root Beer
+- Display information about the Root Beer
 
 ## Usage of Root_Beer Class ##
 
