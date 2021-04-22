@@ -62,6 +62,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 ---
 
 ## v2.0
+---
 
 ## Gitignore File
 - Specifies intentionally untracked files that Git should ignore
@@ -75,6 +76,32 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - method used for testing: assertEquals(expectedValue, actualValue)
 - amount of tests: 33
 - amount of passed tests: 33
+
+---
+
+## Technologies used ##
+- IntelliJ
+- Maven
+- Git
+- GitHub
+- dillinger.io
+
+## Currently tested with ##
+
+- open project directory with IntelliJ
+- with JDK 15.0.2
+
+
+
+## Branches created for Beer Class ##
+
+- branch name: testBeer
+- purpose: test all methods in Beer Class
+- framework: JUnit 5
+- test objects created: heineken, goesser
+- method used for testing: assertEquals(expectedValue, actualValue)
+- amount of tests: 17
+- amount of passed tests: 17
 
 ---
 
