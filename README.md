@@ -6,6 +6,11 @@
 ## Description ##
 Konf_M20_Gindra-Vady_Juric_Metry-Saad is a drinks project from Gerwald Gindra-Vady, Valentina Juric and Antonius Metry Saad that is based on the Drinks-Sample project. The purpose of this project is to make drinks and display information about the drinks.
 
+
+## v1.0
+
+---
+
 ## Features to implement for Coffee Class ##
 
 - Make a coffee
@@ -53,6 +58,25 @@ By Valentina Juric (GitHub: valentinajuric)
 - Display information about the Root Beer with the printInfo method
 
 By Gerwald Gindra-Vady (GitHub: Gerw4ld)
+
+---
+
+## v2.0
+
+## Gitignore File
+- Specifies intentionally untracked files that Git should ignore
+
+## Branches created for Coffee Class ##
+
+- branch name: testCoffee
+- purpose: test all methods in Coffee Class
+- framework: JUnit 5
+- test objects created: longBlack, latte, cappuccino
+- method used for testing: assertEquals(expectedValue, actualValue)
+- amount of tests: 33
+- amount of passed tests: 33
+
+---
 
 ## Technologies used ##
 - IntelliJ
