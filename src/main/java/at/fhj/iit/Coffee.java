@@ -99,6 +99,22 @@ public class Coffee extends Drink {
         String milkInformation = withMilk == false ? "without milk" : "with milk";
         return "You ordered a coffee called " + name + " with " + coffeeSpoon + " coffee spoons" + ", " + sugarSpoon + " sugar spoons and " + milkInformation;
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getCoffeeSpoon() {
+        return coffeeSpoon;
+    }
+
+    public int getSugarSpoon() {
+        return sugarSpoon;
+    }
+
+    public boolean isWithMilk() {
+        return withMilk;
+    }
 }
 
 
