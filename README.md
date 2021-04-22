@@ -77,22 +77,6 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - amount of tests: 33
 - amount of passed tests: 33
 
----
-
-## Technologies used ##
-- IntelliJ
-- Maven
-- Git
-- GitHub
-- dillinger.io
-
-## Currently tested with ##
-
-- open project directory with IntelliJ
-- with JDK 15.0.2
-
-
-
 ## Branches created for Beer Class ##
 
 - branch name: testBeer
