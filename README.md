@@ -102,6 +102,18 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - framework: JUnit 5
 - test objects created: heineken, goesser
 - method used for testing: assertEquals(expectedValue, actualValue)
+- explanation:
+  - inits two beers that differ from each other for each test [setup]
+  - call constructor [exercise]
+  - verify that constructor works as expected [verify]
+  - call getter methods [exercise]
+  - verify that getter works as expected [verify]
+  - call setter method [exercise]
+  - verify that setter works as expected [verify]
+  - call void methods [exercise]
+  - verify that data in void method is manipulated as expected [verify]
+  - pass wrong arguments [exercise]
+  - verify that exception occurs as expected [verify]
 - amount of tests: 17
 - amount of passed tests: 17
 
