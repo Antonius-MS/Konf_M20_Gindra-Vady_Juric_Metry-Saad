@@ -73,7 +73,17 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - purpose: test all methods in Coffee Class
 - framework: JUnit 5
 - test objects created: longBlack, latte, cappuccino
-- method used for testing: assertEquals(expectedValue, actualValue)
+- method used for testing: assertEquals(expectedValue, actualValue) 
+- explanation: 
+  - init three coffees that are completely different for each test [setup]
+  - call constructor [exercise]
+  - verify that constructor works as expected [verify]
+  - call getter methods [exercise]
+  - verify that getter works as expected [verify]
+  - call void methods [exercise]
+  - verify that data in void method is manipulated as expected [verify]
+  - pass wrong arguments [exercise]
+  - verify that exception occurs as expected [verify]
 - amount of tests: 33
 - amount of passed tests: 33
 
