@@ -69,7 +69,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 | Name                  | Test Class    | Amount of Tests | Amount of passed Tests | Test Coverage (Methods) |
 | --------------------- |:-------------:| ---------------:| ----------------------:|------------------------:|
 | Gerwald Gindra-Vady   |               |                 |                        |                         |
-| Valentina Juric       |               |                 |                        |                         |
+| Valentina Juric       | BeerTest      |  17             | 17                     |  100%                   |
 | Antonius Metry Saad   | CoffeeTest    |  33             | 33                     |  100%                   |
 
 ## Gitignore File
@@ -122,11 +122,22 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 
 ## Commands ##
 
-| Command       | Description        | 
-| ------------- |:------------------:| 
-| git branch    | create new branch  |
-|               |                    |
-|               |                    |
+| Command                   | Description        | 
+|---------------------------|:-------------------| 
+| git clone "URL"           | obtain a repository from an existing URL |
+| git status                | shows the working tree status  |
+| git add "file"            | adds a file to the staging area  |
+| git commit -m "message"   | snapshots the file permanently in the version history  |
+| git pull                  | fetches and merges changes on the remote server to your working directory |
+| git push                  | sends committed changes to remote repository  |
+| git branch "name"         | create new branch  |
+| git checkout "name"       | switch to a branch |
+| git branch                | lists branches     |
+| git branch -d "name"      | deletes a branch   |
+| git branch -m "name"      | renames a branch   |
+| git push -u origin "name" | push changes to remote repository |
+
+
 
 ## Currently tested with ##
 
