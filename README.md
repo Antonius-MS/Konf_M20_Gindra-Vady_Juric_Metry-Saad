@@ -144,3 +144,9 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 
 - open project directory with IntelliJ
 - with JDK 15.0.2
+
+## Sources ##
+- https://www.tutorialspoint.com/junit/junit_test_framework.htm
+- https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+- https://www.markdownguide.org/cheat-sheet
+- https://www.makeareadme.com/
