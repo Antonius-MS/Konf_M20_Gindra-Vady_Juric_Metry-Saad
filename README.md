@@ -119,6 +119,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - Git
 - GitHub
 - dillinger.io
+- JUnit 5
 
 ## Commands ##
 
