@@ -64,6 +64,14 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 ## v2.0
 ---
 
+## Overview
+
+| Name                  | Test Class    | Amount of Tests | Amount of passed Tests | Test Coverage (Methods) |
+| --------------------- |:-------------:| ---------------:| ----------------------:|------------------------:|
+| Gerwald Gindra-Vady   |               |                 |                        |                         |
+| Valentina Juric       |               |                 |                        |                         |
+| Antonius Metry Saad   | CoffeeTest    |  33             | 33                     |  100%                   |
+
 ## Gitignore File
 - Specifies intentionally untracked files that Git should ignore
 
@@ -97,6 +105,12 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - amount of tests: 17
 - amount of passed tests: 17
 
+
+
+
+
+
+
 ---
 
 ## Technologies used ##
@@ -105,6 +119,14 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - Git
 - GitHub
 - dillinger.io
+
+## Commands ##
+
+| Command       | Description        | 
+| ------------- |:------------------:| 
+| git branch    | create new branch  |
+|               |                    |
+|               |                    |
 
 ## Currently tested with ##
 
