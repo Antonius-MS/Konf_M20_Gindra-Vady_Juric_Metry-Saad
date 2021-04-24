@@ -67,7 +67,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 ## Overview
 
 | Name                  | Test Class    | Amount of Tests | Amount of passed Tests | Test Coverage (Methods) |
-| --------------------- |:-------------:| ---------------:| ----------------------:|------------------------:|
+| --------------------- |:--------------|:----------------|:-----------------------|:------------------------|
 | Gerwald Gindra-Vady   |               |                 |                        |                         |
 | Valentina Juric       | BeerTest      |  17             | 17                     |  100%                   |
 | Antonius Metry Saad   | CoffeeTest    |  33             | 33                     |  100%                   |
