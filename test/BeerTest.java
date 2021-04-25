@@ -1,8 +1,7 @@
-package at.fhj.iit;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
+import at.fhj.iit.Beer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
