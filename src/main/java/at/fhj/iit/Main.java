@@ -16,8 +16,8 @@ public class Main {
         seperatorLine();
 
         //creates a new Root Beer object with the two passed parameters
-        Root_Beer A_and_W = new Root_Beer("AW", true);
-        A_and_W.printInfo();
+        RootBeer aAndW = new RootBeer("AW", 0.5, 0, true);
+        aAndW.printInfo();
         seperatorLine();
     }
 
