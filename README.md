@@ -95,6 +95,8 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - amount of tests: 33
 - amount of passed tests: 33
 
+By Antonius Metry Saad (GitHub: Antonius-MS)
+
 ## Branches created for Beer Class ##
 
 - branch name: testBeer
@@ -117,6 +119,8 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - amount of tests: 17
 - amount of passed tests: 17
 
+By Valentina Juric (GitHub: valentinajuric)
+
 ## Branches created for RootBeer Class ##
 
 - branch name: testRootBeer
@@ -134,7 +138,9 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
   - verify that method outputs String as expected [verify]
 - amount of tests: 24
 - amount of passed tests: 24
-- 
+
+By Gerwald Gindra-Vady (GitHub: Gerw4ld)
+
 ---
 
 ## Technologies used ##
@@ -172,6 +178,13 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 ---
 
 ## JavaDoc
+
+#### What is JavaDoc?
+
+JavaDoc tool is a document generator tool in Java.
+It generates a documentation of your code in HTML format.
+A JavaDoc comment looks like this /**..........*/ and can contain information about classes, constructors and methods.
+Detailed information can be found at [Oracle Site about JavaDoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
 
 ### JavaDoc Tags
 
@@ -241,3 +254,4 @@ public class Liquid {
 - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
 - https://www.markdownguide.org/cheat-sheet
 - https://www.makeareadme.com/
+- https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/
