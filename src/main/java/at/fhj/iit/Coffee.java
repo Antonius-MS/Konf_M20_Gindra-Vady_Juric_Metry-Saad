@@ -1,7 +1,12 @@
 package at.fhj.iit;
 
 /**
- * represents a coffee
+ * <h1>Coffee</h1>
+ * <h2>Represents a coffee</h2>
+ * A coffee can have a specific volume and be made with coffee spoons, sugar spoons and milk
+ * <p>
+ * Last-Change: 23.04.2021
+ * @author Antonius Metry Saad
  */
 public class Coffee extends Drink {
     /**
@@ -62,7 +67,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns alcohol percentage of coffee
+     * Returns alcohol in coffee
      *
      * @return alcohol percentage of a coffee
      */
@@ -98,6 +103,42 @@ public class Coffee extends Drink {
     public String toString() {
         String milkInformation = withMilk == false ? "without milk" : "with milk";
         return "You ordered a coffee called " + name + " with " + coffeeSpoon + " coffee spoons" + ", " + sugarSpoon + " sugar spoons and " + milkInformation;
+    }
+
+    /**
+     * Returns coffee name
+     *
+     * @return the name of the coffee
+     */
+    public String getName(){
+        return name;
+    }
+
+    /**
+     * Returns the amount of coffee spoons
+     *
+     * @return the amount of coffee spoons in the coffee
+     */
+    public int getCoffeeSpoon() {
+        return coffeeSpoon;
+    }
+
+    /**
+     * Returns the amount of sugar spoons
+     *
+     * @return the amount of sugar spoons in the coffee
+     */
+    public int getSugarSpoon() {
+        return sugarSpoon;
+    }
+
+    /**
+     * Returns if coffee is with milk
+     *
+     * @return if coffee is with milk
+     */
+    public boolean isWithMilk() {
+        return withMilk;
     }
 }
 
