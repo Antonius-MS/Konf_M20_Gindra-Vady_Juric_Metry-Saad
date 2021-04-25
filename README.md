@@ -157,6 +157,73 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - open project directory with IntelliJ
 - with JDK 15.0.2
 
+---
+
+## JavaDoc
+
+### JavaDoc Tags
+
+JavaDoc Tags are used at the end of a JavaDoc comment to provide more information about code being described.
+Examples of tags are given below.
+
+
+| Tag      	| Parameter    	| Description                                                  	|
+|----------	|--------------	|--------------------------------------------------------------	|
+| @autor   	| author_name  	| describes the author                                         	|
+| @param   	| description  	| provide information about method parameter or input it takes 	|
+| @see     	| reference    	| generate a link to other element of document                 	|
+| @version 	| version-name 	| provide version of class, interface or enum                  	|
+| @return  	| description  	| provide the return value                                     	|
+
+
+### How to generate a JavaDoc in IntelliJ?
+
+- Go to tools in the menu bar
+- Click on Generate JavaDoc
+- Specify the location for the JavaDoc file on your computer
+- Select the project and then the packages for which you want to create the JavaDoc file
+
+### Code Example using JavaDoc
+
+```java
+
+/**
+ * represents a liquid which can be used in drinks
+ */
+public class Liquid {
+    /**
+     * name of liquid
+     */
+    private String name;
+    /**
+     * volume of liquid (in liter)
+     */
+    private double volume;
+
+    /**
+     * alcoholPercent of liquid (in percent eg. 42)
+     */
+    private double alcoholPercent;
+
+    /**
+     * Creates new liquid with given name, volume and
+     * alcoholPercent
+     *
+     * @param name name of liquid
+     * @param volume volume of liquid
+     * @param alcoholPercent of liquid
+     */
+    public Liquid(String name, double volume, double alcoholPercent) {
+        this.name = name;
+        checkVolume(volume);
+
+        this.volume = volume;
+        this.alcoholPercent = alcoholPercent;
+    }
+
+
+```
+
 ## Sources ##
 - https://www.tutorialspoint.com/junit/junit_test_framework.htm
 - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
