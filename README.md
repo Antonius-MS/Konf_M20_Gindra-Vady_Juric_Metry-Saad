@@ -68,7 +68,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 
 | Name                  | Test Class    | Amount of Tests | Amount of passed Tests | Test Coverage (Methods) |
 | --------------------- |:--------------|:----------------|:-----------------------|:------------------------|
-| Gerwald Gindra-Vady   |               |                 |                        |                         |
+| Gerwald Gindra-Vady   | RootBeerTest  |  24             | 24                     |  100%                   |
 | Valentina Juric       | BeerTest      |  17             | 17                     |  100%                   |
 | Antonius Metry Saad   | CoffeeTest    |  33             | 33                     |  100%                   |
 
@@ -117,12 +117,24 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - amount of tests: 17
 - amount of passed tests: 17
 
+## Branches created for RootBeer Class ##
 
-
-
-
-
-
+- branch name: testRootBeer
+- purpose: test all methods in RootBeer Class
+- framework: JUnit 5
+- test objects created: aW, bargs, mug
+- method used for testing: assertEquals(expectedValue, actualValue)
+- explanation:
+  - init three rootBeers that differ from each other for all the tests [setup]
+  - call constructor [exercise]
+  - verify that constructor works as expected [verify]
+  - call getter methods [exercise]
+  - verify that getter works as expected [verify]
+  - call String output [exercise]
+  - verify that method outputs String as expected [verify]
+- amount of tests: 24
+- amount of passed tests: 24
+- 
 ---
 
 ## Technologies used ##
