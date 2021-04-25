@@ -1,28 +1,83 @@
 package at.fhj.iit;
-
+/**
+ * <h1>Beer</h1>
+ * <h2>Represents a beer</h2>
+ * A beer can either be open or close
+ * <p>
+ * Last-Change: 25.04.2021
+ * @author Valentina Juric
+ */
 public class Beer extends Drink {
 
-    //instance variables
+    /**
+     * bottle closed or not
+     */
     private boolean bottleIsClosed;
+
+    /**
+     * alcohol in a beer
+     */
+    private boolean alcoholic = true;
+
+    /**
+     * standard alcohol percentage in a beer
+     */
+    private int alcoholPercentage = 5;
+
+    /**
+     * standard beer volume in liters
+     */
+    private double volumeInLiters = 0.3;
+
+    /**
+     * represents a liquid
+     */
     protected Liquid b;
 
-    //constructor
+    /**
+     * Creates new beer with given name and
+     * whether bottle is open or not
+     *
+     * @param name name of the beer
+     * @param bottleIsClosed whether bottle is closed or not
+     */
     public Beer (String name, boolean bottleIsClosed) {
         super(name);
         this.bottleIsClosed = bottleIsClosed;
     }
 
-    //getter for bottleIsClosed
+    /**
+     * Getter for name
+     *
+     * @return name of beer
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Getter for bottleIsClosed
+     *
+     * @return if bottle is closed or not
+     */
     public boolean getBottleIsClosed() {
         return this.bottleIsClosed;
     }
 
-    //setter for bottleIsClosed
+    /**
+     * Setter for bottleIsClosed
+     *
+     * @param bottleIsClosed new value
+     */
     public void setBottleIsClosed(boolean bottleIsClosed) {
         this.bottleIsClosed = bottleIsClosed;
     }
 
-    //method to open the Bottle & print that it is opening or already is open
+    /**
+     * Opens the bottle if its not already and prints text
+     *
+     * @param bottleClosed whether it is closed or already open
+     */
     public void openBottle(boolean bottleClosed) {
         if (bottleClosed) {
             System.out.println("Opening bottle of your " + name + " beer...");
@@ -33,24 +88,33 @@ public class Beer extends Drink {
         }
     }
 
-    //return alcohol Volume of Liquid b
+    /**
+     * Returns volume of the beer
+     *
+     * @return the volume of beer in liter
+     */
     @Override
     public double getVolume() {
-        return b.getVolume();
+        return this.volumeInLiters;
     }
 
-    //return alcohol percentage of Liquid b
+    /**
+     * Returns alcohol percentage of beer
+     *
+     * @return alcohol percentage of a beer
+     */
     @Override
     public double getAlcoholPercent() {
-        return b.getAlcoholPercent();
+        return this.alcoholPercentage;
     }
 
-    //gives information if Liquid b is alcoholic or not
+    /**
+     * Returns if beer is alcoholic
+     *
+     * @return if beer is alcoholic
+     */
     @Override
     public boolean isAlcoholic() {
-        if(b.getAlcoholPercent() > 0){
-            return true;
-        }
-        return false;
+        return this.alcoholic;
     }
 }
