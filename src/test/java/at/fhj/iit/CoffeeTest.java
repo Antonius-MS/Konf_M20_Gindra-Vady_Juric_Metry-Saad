@@ -1,25 +1,18 @@
-
-
 package at.fhj.iit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-import at.fhj.iit.Coffee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
- * <h1>CoffeeTest</h1>
- * <h2>Tests the methods in the Coffee Class</h2>
- * Creates three different coffees and tests if expected output is the same as actual output
- * <p>
- * Last-Change: 23.04.2021
+ * Creates different coffees and tests if expected output is the same as actual output
+ *
  * @author Antonius Metry Saad
  */
-@DisplayName("Testing Liquid implementation")
+@DisplayName("Testing Coffee implementation")
 public class CoffeeTest {
     private Coffee coldCoffee;
     private Coffee longBlack;
@@ -30,7 +23,7 @@ public class CoffeeTest {
     @BeforeEach
     void setup() {
         // SETUP PHASE
-        // Create three new Coffees
+        // Create two new Coffees
         longBlack = new Coffee("Schwarzer Kaffee", new Liquid("Hot Water", 0.5, 0), 3, 0, false);
         coldCoffee = new Coffee("Kalter Kaffee", new Liquid("Cold Water", 0.3, 0), 2, 1, true);
     }
@@ -225,8 +218,5 @@ public class CoffeeTest {
         });
         assertEquals(NullPointerException.class, throwable.getClass());
     }
-
-
-
 
 }
