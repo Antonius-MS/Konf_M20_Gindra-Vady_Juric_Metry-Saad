@@ -141,6 +141,9 @@ By Valentina Juric (GitHub: valentinajuric)
 
 By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 
+## Explanation of Test Coverage ##
+Tests are done for common inputs but not every possible input is tested. So we have 100% test coverage of the important methods and their scenarios but not 100% test coverage for every possible scenario.
+
 ---
 
 ## Technologies used ##
