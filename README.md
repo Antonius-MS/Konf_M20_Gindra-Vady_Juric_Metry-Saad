@@ -70,7 +70,7 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 | --------------------- |:--------------|:----------------|:-----------------------|:------------------------|
 | Gerwald Gindra-Vady   | RootBeerTest  |  24             | 24                     |  100%                   |
 | Valentina Juric       | BeerTest      |  17             | 17                     |  100%                   |
-| Antonius Metry Saad   | CoffeeTest    |  33             | 33                     |  100%                   |
+| Antonius Metry Saad   | CoffeeTest    |  22             | 22                     |  100%                   |
 
 ## Gitignore File
 - Specifies intentionally untracked files that Git should ignore
@@ -80,10 +80,10 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
 - branch name: testCoffee
 - purpose: test all methods in Coffee Class
 - framework: JUnit 5
-- test objects created: longBlack, latte, cappuccino
+- test objects created: longBlack, coldCoffee
 - method used for testing: assertEquals(expectedValue, actualValue) 
 - explanation: 
-  - init three coffees that are completely different for each test [setup]
+  - init two coffees that are completely different for each test [setup]
   - call constructor [exercise]
   - verify that constructor works as expected [verify]
   - call getter methods [exercise]
@@ -92,8 +92,8 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
   - verify that data in void method is manipulated as expected [verify]
   - pass wrong arguments [exercise]
   - verify that exception occurs as expected [verify]
-- amount of tests: 33
-- amount of passed tests: 33
+- amount of tests: 22
+- amount of passed tests: 22
 
 By Antonius Metry Saad (GitHub: Antonius-MS)
 
