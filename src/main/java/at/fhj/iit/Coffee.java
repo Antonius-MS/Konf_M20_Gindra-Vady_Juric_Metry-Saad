@@ -1,3 +1,4 @@
+
 package at.fhj.iit;
 
 /**
@@ -9,20 +10,6 @@ package at.fhj.iit;
  * @author Antonius Metry Saad
  */
 public class Coffee extends Drink {
-    /**
-     * alcohol percentage in a coffee
-     */
-    private final int ALCOHOL_PERCENTAGE = 0;
-
-    /**
-     * alcohol in a coffee
-     */
-    private final boolean IS_ALCOHOLIC = false;
-
-    /**
-     * volume of the coffee in milliliter
-     */
-    private int volumeInMilliliter = 0;
 
     /**
      * coffee spoons in the coffee
@@ -40,17 +27,22 @@ public class Coffee extends Drink {
     private boolean withMilk = false;
 
     /**
+     * liquid inside of the coffee
+     */
+    protected Liquid liquid;
+
+    /**
      * Creates a Coffee object with given name, volume, coffee spoons, sugar spoons and milk
      *
-     * @param name               name of the coffee
-     * @param volumeInMilliliter volume of the the coffee
-     * @param coffeeSpoon        coffee spoons in this coffee
-     * @param sugarSpoon         sugar spoons in this coffee
-     * @param withMilk           milk in this coffee
+     * @param name name of the coffee
+     * @param liquid liquid inside of the coffee
+     * @param coffeeSpoon amount of coffee spoons
+     * @param sugarSpoon amount of sugar spoons
+     * @param withMilk coffee contains milk
      */
-    Coffee(String name, int volumeInMilliliter, int coffeeSpoon, int sugarSpoon, boolean withMilk) {
+    Coffee(String name, Liquid liquid, int coffeeSpoon, int sugarSpoon, boolean withMilk) {
         super(name);
-        this.volumeInMilliliter = volumeInMilliliter;
+        this.liquid = liquid;
         this.coffeeSpoon = coffeeSpoon;
         this.sugarSpoon = sugarSpoon;
         this.withMilk = withMilk;
@@ -63,7 +55,7 @@ public class Coffee extends Drink {
      */
     @Override
     public double getVolume() {
-        return volumeInMilliliter;
+        return liquid.getVolume();
     }
 
     /**
@@ -73,7 +65,7 @@ public class Coffee extends Drink {
      */
     @Override
     public double getAlcoholPercent() {
-        return ALCOHOL_PERCENTAGE;
+        return liquid.getAlcoholPercent();
     }
 
     /**
@@ -83,7 +75,11 @@ public class Coffee extends Drink {
      */
     @Override
     public boolean isAlcoholic() {
-        return IS_ALCOHOLIC;
+        if(liquid.getAlcoholPercent() > 0)
+            return true;
+        else
+            return false;
+
     }
 
     /**
@@ -141,5 +137,4 @@ public class Coffee extends Drink {
         return withMilk;
     }
 }
-
 
