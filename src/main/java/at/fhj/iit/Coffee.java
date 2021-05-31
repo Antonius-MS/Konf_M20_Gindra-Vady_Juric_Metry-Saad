@@ -1,16 +1,11 @@
-
 package at.fhj.iit;
 
 /**
- * <h1>Coffee</h1>
- * <h2>Represents a coffee</h2>
- * A coffee can have a specific volume and be made with coffee spoons, sugar spoons and milk
- * <p>
- * Last-Change: 23.04.2021
+ * Represents a coffee. A coffee can have a specific volume and be made with coffee spoons, sugar spoons and milk
+ *
  * @author Antonius Metry Saad
  */
 public class Coffee extends Drink {
-
     /**
      * coffee spoons in the coffee
      */
@@ -137,4 +132,3 @@ public class Coffee extends Drink {
         return withMilk;
     }
 }
-
