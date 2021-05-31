@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
  * <h2>Tests the Beer class</h2>
  * carries out tests on all methods from Beer class
  * <p>
- * Last-Change: 25.04.2021
+ * Last-Change: 31.05.2021
  * @author Valentina Juric
  */
 @DisplayName("Testing Beer Class")
@@ -24,13 +24,13 @@ public class BeerTest {
 
     /**
      * Creates two new beers
-     * @results inits three beers that are different for each test
+     * @results inits two beers that are different for each test
      */
     @BeforeEach
     void setup() {
         // run before each test
-        heineken = new Beer("Heineken", true);
-        goesser = new Beer("Goesser", false);
+        heineken = new Beer("Heineken", new Liquid("Cold Water", 0.33, 5), false);
+        goesser = new Beer("Goesser", new Liquid("Cold Water", 0.33, 5), false);
     }
 
     @Test
@@ -38,7 +38,10 @@ public class BeerTest {
     public void testConstructorHeineken(){
         // test the constructor of beer
         assertEquals("Heineken", heineken.getName());
-        assertEquals(true, heineken.getBottleIsClosed());
+        assertEquals("Cold Water", heineken.liquid.getName()); //TODO
+        assertEquals(0.33, heineken.getVolume());
+        assertEquals(5, heineken.getAlcoholPercent());
+        assertEquals(false, heineken.getBottleIsClosed());
     }
 
     @Test
@@ -46,6 +49,9 @@ public class BeerTest {
     public void testConstructorGoesser(){
         // test the constructor of beer
         assertEquals("Goesser", goesser.getName());
+        assertEquals("Cold Water", goesser.liquid.getName());
+        assertEquals(0.33, goesser.getVolume());
+        assertEquals(5, goesser.getAlcoholPercent());
         assertEquals(false, goesser.getBottleIsClosed());
     }
 
@@ -81,21 +87,21 @@ public class BeerTest {
     @DisplayName("Testing volume getter for Heineken")
     public void testVolumeGetterHeineken(){
         // test getVolume() getter
-        assertEquals(0.3, heineken.getVolume());
+        assertEquals(0.33, heineken.getVolume());
     }
 
     @Test
     @DisplayName("Testing volume getter for Gösser")
     public void testVolumeGetterGoesser(){
         // test getVolume() getter
-        assertEquals(0.3, goesser.getVolume());
+        assertEquals(0.33, goesser.getVolume());
     }
 
     @Test
     @DisplayName("Testing getBottleClosed getter for Heineken")
     public void testGetBottleHeineken(){
         // test getBottleIsClosed() getter
-        assertEquals(true, heineken.getBottleIsClosed());
+        assertEquals(false, heineken.getBottleIsClosed());
     }
 
     @Test

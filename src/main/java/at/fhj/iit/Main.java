@@ -11,7 +11,7 @@ public class Main {
         seperatorLine();
 
         //creates a new Beer Object and opens the bottle up.
-        Beer heineken = new Beer("Heineken", true);
+        Beer heineken = new Beer("Heineken", new Liquid("Cold Water", 0.33, 5), true);
         heineken.openBottle(heineken.getBottleIsClosed());
         seperatorLine();
 

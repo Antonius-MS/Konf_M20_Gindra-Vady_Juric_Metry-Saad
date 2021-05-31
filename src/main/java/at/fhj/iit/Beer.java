@@ -4,7 +4,7 @@ package at.fhj.iit;
  * <h2>Represents a beer</h2>
  * A beer can either be open or close
  * <p>
- * Last-Change: 25.04.2021
+ * Last-Change: 31.05.2021
  * @author Valentina Juric
  */
 public class Beer extends Drink {
@@ -15,34 +15,21 @@ public class Beer extends Drink {
     private boolean bottleIsClosed;
 
     /**
-     * alcohol in a beer
-     */
-    private boolean alcoholic = true;
-
-    /**
-     * standard alcohol percentage in a beer
-     */
-    private int alcoholPercentage = 5;
-
-    /**
-     * standard beer volume in liters
-     */
-    private double volumeInLiters = 0.3;
-
-    /**
      * represents a liquid
      */
-    protected Liquid b;
+    protected Liquid liquid;
 
     /**
-     * Creates new beer with given name and
+     * Creates new beer with given name, liquid inside and
      * whether bottle is open or not
      *
      * @param name name of the beer
+     * @param liquid liquid inside of beer
      * @param bottleIsClosed whether bottle is closed or not
      */
-    public Beer (String name, boolean bottleIsClosed) {
+    public Beer (String name, Liquid liquid, boolean bottleIsClosed) {
         super(name);
+        this.liquid = liquid;
         this.bottleIsClosed = bottleIsClosed;
     }
 
@@ -95,7 +82,7 @@ public class Beer extends Drink {
      */
     @Override
     public double getVolume() {
-        return this.volumeInLiters;
+        return liquid.getVolume();
     }
 
     /**
@@ -105,7 +92,7 @@ public class Beer extends Drink {
      */
     @Override
     public double getAlcoholPercent() {
-        return this.alcoholPercentage;
+        return liquid.getAlcoholPercent();
     }
 
     /**
@@ -115,6 +102,9 @@ public class Beer extends Drink {
      */
     @Override
     public boolean isAlcoholic() {
-        return this.alcoholic;
+        if(liquid.getAlcoholPercent() > 0)
+            return true;
+        else
+            return false;
     }
 }
