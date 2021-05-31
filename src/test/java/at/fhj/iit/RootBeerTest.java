@@ -1,3 +1,5 @@
+package at.fhj.iit;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import at.fhj.iit.RootBeer;
