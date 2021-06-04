@@ -6,24 +6,9 @@ package at.fhj.iit;
 public class RootBeer extends Drink {
 
     /**
-     * alcohol percentage of RootBeer
-     */
-    private final double ALCOHOL_PERCENTAGE = 0;
-
-    /**
-     * alcohol in RootBeer
-     */
-    private final boolean IS_ALCOHOLIC = false;
-
-    /**
      * knowledge of the beverage RootBeer
      */
     private boolean iKnowRootBeer;
-
-    /**
-     * volume of RootBeer
-     */
-    private double volume;
 
     /**
      * info about RootBeer
@@ -31,20 +16,20 @@ public class RootBeer extends Drink {
     private String info = "";
 
     /**
-     * uses only one liquid called RootBeer
+     * liquid inside of the RootBeer
      */
-    protected Liquid rootBeer;
+    protected Liquid liquid;
 
     /**
-     * Creates a RootBeer object with given name and statement of knowledge of this kind of beverage
+     * Creates a new Rootbeer
      *
-     * @param name           name of the RootBeer
-     * @param iKnowRootBeer beverage is known or unknown
-     * @return
+     * @param name name of the drink
+     * @param liquid liquid used to make this drink
+     * @param iKnowRootBeer already known by the consumer
      */
-    RootBeer(String name, double volume, double ALCOHOL_PERCENTAGE, boolean iKnowRootBeer) {
+    RootBeer(String name, Liquid liquid, boolean iKnowRootBeer) {
         super(name);
-        this.volume = volume;
+        this.liquid = liquid;
         this.iKnowRootBeer = iKnowRootBeer;
     }
 
@@ -53,7 +38,7 @@ public class RootBeer extends Drink {
      *
      * @return the name as String
      */
-    public String getName() { return this.name; }
+    public String getName() { return name; }
 
     /**
      * Returns if rootBeer is known
@@ -68,7 +53,7 @@ public class RootBeer extends Drink {
      * @return the volume in litre
      */
     @Override
-    public double getVolume() { return this.volume; }
+    public double getVolume() { return liquid.getVolume(); }
 
     /**
      * Returns alcohol volume percent of liquid rootBeer
@@ -76,7 +61,7 @@ public class RootBeer extends Drink {
      * @return alcohol volume percent
      */
     @Override
-    public double getAlcoholPercent () { return ALCOHOL_PERCENTAGE; }
+    public double getAlcoholPercent () { return liquid.getAlcoholPercent(); }
 
     /**
      * Returns if RootBeer is alcoholic
@@ -84,7 +69,12 @@ public class RootBeer extends Drink {
      * @return if RootBeer is alcoholic
      */
     @Override
-    public boolean isAlcoholic () { return IS_ALCOHOLIC; }
+    public boolean isAlcoholic () {
+        if(liquid.getAlcoholPercent() > 0){
+          return true;
+        }
+        return false;
+    }
 
     /**
      * Returns Info of RootBeer
@@ -100,7 +90,7 @@ public class RootBeer extends Drink {
      */
     public void printInfo () {
         String beverageKnown = iKnowRootBeer == true ? "known" : "unknown";
-        info =  "Please enjoy this " + beverageKnown + " Root Beer called " + name + " with " + this.getAlcoholPercent() + " percent alcohol by volume";
+        info =  "Please enjoy this " + beverageKnown + " Root Beer called " + name + " with " + liquid.getAlcoholPercent() + " percent alcohol by volume";
         System.out.println(info);
     }
 }

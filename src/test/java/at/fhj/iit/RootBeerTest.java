@@ -7,8 +7,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
-@DisplayName("Testing <RootBeer> a Liquid implementation")
+/**
+ * Creates different RootBeers and tests if expected output is the same as actual output
+ *
+ * @author Gerwald Gindra-Vady
+ */
+@DisplayName("Testing RootBeer Implementation")
 public class RootBeerTest {
     private RootBeer aW;
     private RootBeer bargs;
@@ -19,9 +23,9 @@ public class RootBeerTest {
      */
     @BeforeEach
     void setup() {
-        aW = new RootBeer("AW", 0.5, 0,true);
-        bargs = new RootBeer("Bargs", 0.25,0,true);
-        mug = new RootBeer("MUG", 0.3,0,false);
+        aW = new RootBeer("AW", new Liquid("Lemonade", 0.5, 0), true);
+        bargs = new RootBeer("Bargs", new Liquid("Lemonade", 0.25, 0),true);
+        mug = new RootBeer("MUG", new Liquid("Limonade", 0.3, 0),false);
     }
 
     @Test
