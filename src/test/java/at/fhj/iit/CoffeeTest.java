@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 /**
  * Creates different coffees and tests if expected output is the same as actual output
  *
@@ -24,6 +26,7 @@ public class CoffeeTest {
     void setup() {
         // SETUP PHASE
         // Create two new Coffees
+        Registrierkasse.drinksToSellList = new ArrayList<>();
         longBlack = new Coffee("Schwarzer Kaffee", new Liquid("Hot Water", 0.5, 0), 3, 0, false);
         coldCoffee = new Coffee("Kalter Kaffee", new Liquid("Cold Water", 0.3, 0), 2, 1, true);
     }
@@ -218,5 +221,27 @@ public class CoffeeTest {
         });
         assertEquals(NullPointerException.class, throwable.getClass());
     }
+
+    @Test
+    @DisplayName("Testing price setter of cold coffee")
+    public void testPriceSetterColdCoffee(){
+        coldCoffee.setPrice(2);
+        assertEquals(0.6, coldCoffee.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing price getter of cold coffee")
+    public void testPriceGetterColdCoffee(){
+        assertEquals(-1.0, coldCoffee.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing sell for cold coffee")
+    public void testSellColdCoffee(){
+        coldCoffee.sell();
+        assertEquals(coldCoffee, Registrierkasse.drinksToSellList.get(0));
+    }
+
+
 
 }

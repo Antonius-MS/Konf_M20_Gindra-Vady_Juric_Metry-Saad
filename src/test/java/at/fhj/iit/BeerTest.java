@@ -9,12 +9,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 /**
- * Creates different beers and tests if expected output is the same as actual output
+ * Carries out tests on all methods from Beer class
  *
  * @author Valentina Juric
  */
-@DisplayName("Testing Beer Class")
+@DisplayName("Testing Beer Implementation")
 public class BeerTest {
     private Beer heineken;
     private Beer goesser;
@@ -26,6 +28,7 @@ public class BeerTest {
     @BeforeEach
     void setup() {
         // run before each test
+        Registrierkasse.drinksToSellList = new ArrayList<>();
         heineken = new Beer("Heineken", new Liquid("Cold Water", 0.33, 5), false);
         goesser = new Beer("Goesser", new Liquid("Cold Water", 0.33, 5), false);
     }
@@ -163,5 +166,25 @@ public class BeerTest {
             heineken.getName();
         });
         assertEquals(NullPointerException.class, throwable.getClass());
+    }
+
+    @Test
+    @DisplayName("Testing price setter of heineken")
+    public void testPriceSetterHeineken(){
+        heineken.setPrice(3);
+        assertEquals(0.99, heineken.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing price getter of heineken")
+    public void testPriceGetterHeineken(){
+        assertEquals(-1.0, heineken.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing sell for heineken")
+    public void testSellHeineken(){
+        heineken.sell();
+        assertEquals(heineken, Registrierkasse.drinksToSellList.get(0));
     }
 }

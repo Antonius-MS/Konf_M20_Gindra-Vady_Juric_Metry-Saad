@@ -29,8 +29,6 @@ class LiquidTest {
         assertEquals(0, liquid.getAlcoholPercent());
     }
 
-
-
     @Test
     @DisplayName("Testing name getter of liquid")
     void testNameGetter() {
@@ -69,4 +67,6 @@ class LiquidTest {
         liquid.setAlcoholPercent(1);
         assertEquals(liquid.getAlcoholPercent(), 1);
     }
+
+
 }

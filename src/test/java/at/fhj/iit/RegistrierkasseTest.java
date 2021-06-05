@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Carries out tests on all methods from RegistrierkasseTest class
  *
- * @author Valentina Juric
+ * @author Antonius Metry Saad
  */
 @DisplayName("Testing RegistrierkasseTest Implementation")
 public class RegistrierkasseTest {
@@ -70,6 +70,7 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(8.4, registrierkasse.reportNonAlcoholicDrinksSales());
     }
+
     @Test
     @DisplayName("Testing report for low alcoholic drink sales")
     void testReportLowAlcoholicDrinks() {
@@ -87,6 +88,7 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(4, registrierkasse.reportLowAlcoholicDrinks());
     }
+
     @Test
     @DisplayName("Testing report for high alcoholic drink sales")
     void testReportHighAlcoholicDrinks() {
@@ -104,6 +106,7 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(0.0, registrierkasse.reportHighAlcoholicDrinks());
     }
+
     @Test
     @DisplayName("Testing report for drink sales on date")
     void testReportDrinksOnDate() {
@@ -121,11 +124,13 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(6.2, registrierkasse.reportDrinksOnDate("Saturday 05.06.2021"));
     }
+
     @Test
     @DisplayName("Testing report for drink sales from seller")
     void testReportDrinksFromPerson() {
         // Monday, Friday and Saturday Max Mustermann sells the drinks
         // All other days Katrin Musterfrau sells the drinks
+
         blackCoffee.setPrice(6); // 3€ for 1 black coffee that is 0.5L
         blackCoffee.sell();
         heineken.setPrice(10); // 2€ for 1 heineken that is 0.2L
@@ -140,11 +145,13 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(3.2, registrierkasse.reportDrinksFromPerson("Katrin Musterfrau"));
     }
+
     @Test
     @DisplayName("Testing report for drink sales on date and from seller")
     void testReportDrinksFromPersonAndOnDate() {
         // Monday, Friday and Saturday Max Mustermann sells the drinks
         // All other days Katrin Musterfrau sells the drinks
+
         blackCoffee.setPrice(6); // 3€ for 1 black coffee that is 0.5L
         blackCoffee.sell();
         heineken.setPrice(10); // 2€ for 1 heineken that is 0.2L
@@ -159,5 +166,4 @@ public class RegistrierkasseTest {
         registrierkasse.buyDrink("aW", "Tuesday 01.06.2021");
         assertEquals(3.0, registrierkasse.reportDrinksFromPersonAndOnDate("Max Mustermann", "Friday 04.06.2021"));
     }
-
 }

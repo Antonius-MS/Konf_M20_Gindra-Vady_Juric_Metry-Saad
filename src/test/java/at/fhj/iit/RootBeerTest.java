@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 /**
  * Creates different RootBeers and tests if expected output is the same as actual output
  *
@@ -23,6 +25,7 @@ public class RootBeerTest {
      */
     @BeforeEach
     void setup() {
+        Registrierkasse.drinksToSellList = new ArrayList<>();
         aW = new RootBeer("AW", new Liquid("Lemonade", 0.5, 0), true);
         bargs = new RootBeer("Bargs", new Liquid("Lemonade", 0.25, 0),true);
         mug = new RootBeer("MUG", new Liquid("Limonade", 0.3, 0),false);
@@ -180,5 +183,25 @@ public class RootBeerTest {
     public void testPrintInfoMug() {
         mug.printInfo();
         assertEquals("Please enjoy this unknown Root Beer called " + mug.getName() + " with " + mug.getAlcoholPercent() + " percent alcohol by volume", mug.getInfo());
+    }
+
+    @Test
+    @DisplayName("Testing price setter of aW")
+    public void testPriceSetterAW(){
+        aW.setPrice(4);
+        assertEquals(2, aW.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing price getter of aW")
+    public void testPriceGetterAW(){
+        assertEquals(-1.0, aW.getPrice());
+    }
+
+    @Test
+    @DisplayName("Testing sell for aW")
+    public void testSellAW(){
+        aW.sell();
+        assertEquals(aW, Registrierkasse.drinksToSellList.get(0));
     }
 }
