@@ -1,13 +1,14 @@
 package at.fhj.iit;
 /**
- * <h1>Beer</h1>
- * <h2>Represents a beer</h2>
- * A beer can either be open or close
- * <p>
- * Last-Change: 31.05.2021
+ * Represents a beer that is made by a liquid
+ *
  * @author Valentina Juric
  */
-public class Beer extends Drink {
+public class Beer extends Drink implements Sellable{
+    /**
+     * price of the beer
+     */
+    private double price = -1.0;
 
     /**
      * bottle closed or not
@@ -76,7 +77,7 @@ public class Beer extends Drink {
     }
 
     /**
-     * Returns volume of the beer
+     * Calculates volume of the beer
      *
      * @return the volume of beer in liter
      */
@@ -86,7 +87,7 @@ public class Beer extends Drink {
     }
 
     /**
-     * Returns alcohol percentage of beer
+     * Calculates alcohol percentage of beer
      *
      * @return alcohol percentage of a beer
      */
@@ -96,7 +97,7 @@ public class Beer extends Drink {
     }
 
     /**
-     * Returns if beer is alcoholic
+     * Checks if beer is alcoholic
      *
      * @return if beer is alcoholic
      */
@@ -106,5 +107,33 @@ public class Beer extends Drink {
             return true;
         else
             return false;
+    }
+
+    /**
+     * Sets the price of this beer
+     *
+     * @param price of the beer
+     */
+    @Override
+    public void setPrice(int price) {
+        this.price = liquid.getVolume() * price;
+    }
+
+    /**
+     * Gets the price of this beer
+     *
+     * @return price for this beer
+     */
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Sell this beer
+     */
+    @Override
+    public void sell() {
+        Registrierkasse.drinksToSellList.add(this);
     }
 }
