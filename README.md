@@ -248,6 +248,7 @@ public class Liquid {
         this.volume = volume;
         this.alcoholPercent = alcoholPercent;
     }
+   }
 
 
 ```
