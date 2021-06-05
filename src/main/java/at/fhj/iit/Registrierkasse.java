@@ -59,4 +59,106 @@ public class Registrierkasse {
         }
         return "We don't have a product called " + name + "!";
     }
+
+
+
+    /**
+     * Creates report of non alcoholic drinks sales
+     *
+     * @return sales of non alcoholic drinks
+     */
+    public double reportNonAlcoholicDrinksSales(){
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getAlcoholPercentage() == 0)
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
+
+    /**
+     * Creates report of low alcoholic drinks sales
+     *
+     * @return sales of low alcoholic drinks
+     */
+    public double reportLowAlcoholicDrinks() {
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getAlcoholPercentage() > 0 && soldDrink.getAlcoholPercentage() <= 16 )
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
+
+    /**
+     * Creates report of high alcoholic drinks sales
+     *
+     * @return sales of high alcoholic drinks
+     */
+    public double reportHighAlcoholicDrinks() {
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getAlcoholPercentage() > 16 )
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
+
+    /**
+     * Creates report of drinks on date
+     *
+     * @param date date of purchase
+     * @return sales of drinks on date
+     */
+    public double reportDrinksOnDate(String date) {
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getDate().equals(date) )
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
+
+    /**
+     * Creates report of drinks from seller
+     *
+     * @param name name of the seller
+     * @return sales of drinks from seller
+     */
+    public double reportDrinksFromPerson(String name) {
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getSellerName().equals(name))
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
+
+    /**
+     * Creates report of drinks on date and from seller
+     *
+     * @param name name of the seller
+     * @param date date of the purchase
+     * @return sales of drinks on date
+     */
+    public double reportDrinksFromPersonAndOnDate(String name, String date) {
+        double sales = 0.0;
+
+        for(ImportantSellInformation soldDrink : importantSellInformationList) {
+            if(soldDrink.getSellerName().equals(name) && soldDrink.getDate().equals(date))
+                sales += soldDrink.getPrice();
+        }
+
+        return sales;
+    }
 }
