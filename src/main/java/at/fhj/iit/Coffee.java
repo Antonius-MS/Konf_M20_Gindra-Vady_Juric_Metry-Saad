@@ -1,11 +1,16 @@
 package at.fhj.iit;
 
 /**
- * Represents a coffee. A coffee can have a specific volume and be made with coffee spoons, sugar spoons and milk
+ * Represents a coffee that has a liquid inside and can be made with coffee spoons, sugar spoons and milk
  *
  * @author Antonius Metry Saad
  */
-public class Coffee extends Drink {
+public class Coffee extends Drink implements Sellable {
+    /**
+     * price of the coffee
+     */
+    private double price = -1.0;
+
     /**
      * coffee spoons in the coffee
      */
@@ -27,7 +32,7 @@ public class Coffee extends Drink {
     protected Liquid liquid;
 
     /**
-     * Creates a Coffee object with given name, volume, coffee spoons, sugar spoons and milk
+     * Creates a Coffee object with given name, liquid, coffee spoons, sugar spoons and milk
      *
      * @param name name of the coffee
      * @param liquid liquid inside of the coffee
@@ -44,9 +49,9 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns volume of the coffee
+     * Calculates volume of the coffee
      *
-     * @return the volume of coffee in milliliter
+     * @return the volume of coffee in liter
      */
     @Override
     public double getVolume() {
@@ -54,7 +59,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns alcohol in coffee
+     * Calculates alcohol percentage of coffee
      *
      * @return alcohol percentage of a coffee
      */
@@ -64,7 +69,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns if coffee is alcoholic
+     * Checks if coffee is alholic
      *
      * @return if coffee is alcoholic
      */
@@ -87,7 +92,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns which coffee has been ordered
+     * Informs about which coffee has been ordered
      *
      * @return information about name, coffee spoons, sugar spoons and milk of the coffee
      */
@@ -97,7 +102,35 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns coffee name
+     * Sets the price of this coffee
+     *
+     * @param price of the coffee
+     */
+    @Override
+    public void setPrice(int price) {
+        this.price = liquid.getVolume() * price;
+    }
+
+    /**
+     * Gets the price of this coffee
+     *
+     * @return price for this coffee
+     */
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Sell this coffee
+     */
+    @Override
+    public void sell() {
+        Registrierkasse.drinksToSellList.add(this);
+    }
+
+    /**
+     * Gets name of this coffee
      *
      * @return the name of the coffee
      */
@@ -106,7 +139,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns the amount of coffee spoons
+     * Gets the amount of coffee spoons
      *
      * @return the amount of coffee spoons in the coffee
      */
@@ -115,7 +148,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns the amount of sugar spoons
+     * Gets the amount of sugar spoons
      *
      * @return the amount of sugar spoons in the coffee
      */
@@ -124,7 +157,7 @@ public class Coffee extends Drink {
     }
 
     /**
-     * Returns if coffee is with milk
+     * Checks if coffee is with milk
      *
      * @return if coffee is with milk
      */
