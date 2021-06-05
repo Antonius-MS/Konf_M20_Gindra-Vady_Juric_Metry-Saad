@@ -4,6 +4,49 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <reporting>
+    <plugins>
+      <!-- maven site for documentation -->
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+      </plugin>
+
+      <!-- Java Doc within Maven Site Documentation-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <!-- Disable JavaDoc warnings -->
+          <additionalJOption>-Xdoclint:none</additionalJOption>
+        </configuration>
+      </plugin>
+
+      <!-- Test Coverage from JaCoCo Plugin integration in Maven Site Documentation -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <configuration>
+          <dataFile>${jacoco.execution.data.file}</dataFile>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
   <!-- project main information -->
   <groupId>at.fhj.iit</groupId>
   <artifactId>Drinks</artifactId>
@@ -17,47 +60,42 @@
     </dependency>
   </dependencies>
   <name>Drinks</name>
-
-  <url>https://github.com/michaelulm/software-configuration-management/tree/master/exercises/Drinks-Sample</url>
+  <description>A project for creating, selling and purchasing drinks</description>
+  <url>https://github.com/Antonius-MS/Konf_M20_Gindra-Vady_Juric_Metry-Saad</url>
 
   <!-- general developers information -->
   <developers>
     <!-- each developer with general information for better communication within the project team -->
     <developer>
-      <id>michaelulm</id>
-      <name>Michael Ulm</name>
-      <email>michael.ulm@fh-joanneum.at</email>
-      <url>https://www.michael-ulm.at</url>
+      <id>Antonius-MS</id>
+      <name>Antonius Metry Saad</name>
+      <email>antonius.metrysaad@edu.fh-joanneum.at</email>
+      <url>https://github.com/Antonius-MS</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
       <roles>
-        <role>Senior Lecturer</role>
-      </roles>
-      <timezone>Europe/Vienna</timezone>
-      <properties>
-        <picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
-      </properties>
-    </developer>
-    <developer>
-      <id>chrishofer</id>
-      <name>Christian Hofer</name>
-      <email>christian.hofer@campus02.at</email>
-      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
-      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik</organizationUrl>
-      <roles>
-        <role>Lecturer &amp; Research Scientist</role>
+        <role>Student</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
     </developer>
     <developer>
-      <id>Rigbin</id>
-      <name>Harald Schwab</name>
-      <email>harald.schwab2@fh-joanneum.at</email>
-      <url>https://github.com/Rigbin</url>
+      <id>Gerw4ld</id>
+      <name>Gerwald Gindra-Vady</name>
+      <email>gerwald.gindra-vady@edu.fh-joanneum.at</email>
+      <url>https://github.com/Gerw4ld</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
       <roles>
-        <role>Researcher</role>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+    </developer>
+    <developer>
+      <id>valentinajuric</id>
+      <name>Valentina Juric</name>
+      <email>valentina.juric@edu.fh-joanneum.at</email>
+      <url>https://github.com/valentinajuric</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <roles>
+        <role>Student</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
       <properties/>
@@ -71,7 +109,56 @@
 
 
   <build>
+
     <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.6</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- using README.md for Maven Site Documentation -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <!-- Copy the readme file to the site source files so that a page is generated from it. -->
+            <!-- https://stackoverflow.com/questions/13748659/how-to-include-github-markdown-files-into-maven-site -->
+            <id>copy-readme</id>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/src/site/markdown</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}</directory>
+                  <includes>
+                    <include>README.md</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <!-- plugins for build automation process -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -106,6 +193,19 @@
         </dependencies>
       </plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <!-- Disable JavaDoc warnings -->
+          <additionalJOption>-Xdoclint:none</additionalJOption>
+        </configuration>
+      </plugin>
+
+
     </plugins>
+
+
   </build>
 </project>
