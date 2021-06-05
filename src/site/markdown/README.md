@@ -2,57 +2,81 @@
 ### Konf_M20_Gindra-Vady_Juric_Metry-Saad Drinks Project ###
 ## Contributors ##
 ##### Gerwald Gindra-Vady, Valentina Juric and Antonius Metry Saad #####
+
 ## Description ##
 Konf_M20_Gindra-Vady_Juric_Metry-Saad is a drinks project from Gerwald Gindra-Vady, Valentina Juric and Antonius Metry Saad that is based on the Drinks-Sample project. The purpose of this project is to make drinks and display information about the drinks.
+
+
 ## v1.0
+
 ---
+
 ## Features to implement for Coffee Class ##
+
 - Make a coffee
 - Give the coffee a name
 - Enter the amount of coffee spoons, sugar spoons and if milk should be added
 - Add more sugar spoons after coffee is finished
 - Display information about the coffee
+
 ## Usage of Coffee Class ##
 - Make a coffee with constructor of coffee class
 - Pass the coffee name parameter in the constructor
 - Also pass following parameters to the constructor: the amount of coffee spoons, sugar spoons and if milk should be added
 - Add more sugar spoons after coffee is finished with the addSugarSpoon method
 - Display information about the coffee with the toString method
+
 By Antonius Metry Saad (GitHub: Antonius-MS)
+
 ## Features to implement for Beer Class ##
+
 - Make a beer
 - Give the Beer a name
 - Give the bottle of the Beer a boolean value, either it is open (false) or closed (true)
 - Add a method to open the Beer bottle if it is not already and display when it is opened
+
 ## Usage of Beer Class ##
 - Make a beer with constructor of beer class
 - Put in the beer name parameter in the constructor
 - Also put in whether the bottle is opened (false) or closed (true)
 - To open the bottle use the openBottle method and it will print if it is being opened or if it is already open
+
 By Valentina Juric (GitHub: valentinajuric)
+
 ## Features to implement for RootBeer Class ##
+
 - Make a root beer
 - Give the root beer a name
 - State if you know this kind of beverage
 - Display information about the root beer
+
 ## Usage of RootBeer Class ##
+
 - Make a root beer with the constructor of the RootBeer class
 - Put the root beer name parameter, volume and alcohol percentage in the constructor
 - Put a boolean in the constructor that determines if you already know this kind of beverage
 - Display information about the root beer with the printInfo method
+
 By Gerwald Gindra-Vady (GitHub: Gerw4ld)
+
 ---
+
 ## v2.0
 ---
+
 ## Overview
+
 | Name                  | Test Class    | Amount of Tests | Amount of passed Tests | Test Coverage (Methods) |
 | --------------------- |:--------------|:----------------|:-----------------------|:------------------------|
 | Gerwald Gindra-Vady   | RootBeerTest  |  24             | 24                     |  100%                   |
 | Valentina Juric       | BeerTest      |  17             | 17                     |  100%                   |
 | Antonius Metry Saad   | CoffeeTest    |  22             | 22                     |  100%                   |
+
 ## Gitignore File
 - Specifies intentionally untracked files that Git should ignore
+
 ## Branches created for Coffee Class ##
+
 - branch name: testCoffee
 - purpose: test all methods in Coffee Class
 - framework: JUnit 5
@@ -70,8 +94,11 @@ By Gerwald Gindra-Vady (GitHub: Gerw4ld)
   - verify that exception occurs as expected [verify]
 - amount of tests: 22
 - amount of passed tests: 22
+
 By Antonius Metry Saad (GitHub: Antonius-MS)
+
 ## Branches created for Beer Class ##
+
 - branch name: testBeer
 - purpose: test all methods in Beer Class
 - framework: JUnit 5
@@ -91,8 +118,11 @@ By Antonius Metry Saad (GitHub: Antonius-MS)
   - verify that exception occurs as expected [verify]
 - amount of tests: 17
 - amount of passed tests: 17
+
 By Valentina Juric (GitHub: valentinajuric)
+
 ## Branches created for RootBeer Class ##
+
 - branch name: testRootBeer
 - purpose: test all methods in RootBeer Class
 - framework: JUnit 5
@@ -108,10 +138,14 @@ By Valentina Juric (GitHub: valentinajuric)
   - verify that method outputs String as expected [verify]
 - amount of tests: 24
 - amount of passed tests: 24
+
 By Gerwald Gindra-Vady (GitHub: Gerw4ld)
+
 ## Explanation of Test Coverage ##
 Tests are done for common inputs but not every possible input is tested. So we have 100% test coverage of the important methods and their scenarios but not 100% test coverage for every possible scenario.
+
 ---
+
 ## Technologies used ##
 - IntelliJ
 - Maven
@@ -119,7 +153,9 @@ Tests are done for common inputs but not every possible input is tested. So we h
 - GitHub
 - dillinger.io
 - JUnit 5
+
 ## Commands ##
+
 | Command                   | Description        | 
 |---------------------------|:-------------------| 
 | git clone "URL"           | obtain a repository from an existing URL |
@@ -134,33 +170,51 @@ Tests are done for common inputs but not every possible input is tested. So we h
 | git branch -d "name"      | deletes a branch   |
 | git branch -m "name"      | renames a branch   |
 | git push -u origin "name" | push changes to remote repository |
+
+
+
 ## Currently tested with ##
+
 - open project directory with IntelliJ
 - with JDK 15.0.2
+
 ---
+
 ## JavaDoc
+
 #### What is JavaDoc?
+
 JavaDoc tool is a document generator tool in Java.
 It generates a documentation of your code in HTML format.
 A JavaDoc comment looks like this /**..........*/ and can contain information about classes, constructors and methods.
 Detailed information can be found at [Oracle Site about JavaDoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
+
 ### JavaDoc Tags
+
 JavaDoc Tags are used at the end of a JavaDoc comment to provide more information about code being described.
 Examples of tags are given below.
-| Tag       | Parameter     | Description                                                   |
-|---------- |-------------- |-------------------------------------------------------------- |
-| @autor    | author_name   | describes the author                                          |
-| @param    | description   | provide information about method parameter or input it takes  |
-| @see      | reference     | generate a link to other element of document                  |
-| @version  | version-name  | provide version of class, interface or enum                   |
-| @return   | description   | provide the return value                                      |
+
+
+| Tag      	| Parameter    	| Description                                                  	|
+|----------	|--------------	|--------------------------------------------------------------	|
+| @autor   	| author_name  	| describes the author                                         	|
+| @param   	| description  	| provide information about method parameter or input it takes 	|
+| @see     	| reference    	| generate a link to other element of document                 	|
+| @version 	| version-name 	| provide version of class, interface or enum                  	|
+| @return  	| description  	| provide the return value                                     	|
+
+
 ### How to generate a JavaDoc in IntelliJ?
+
 - Go to tools in the menu bar
 - Click on Generate JavaDoc
 - Specify the location for the JavaDoc file on your computer
 - Select the project and then the packages for which you want to create the JavaDoc file
+
 ### Code Example using JavaDoc
+
 ```java
+
 /**
  * represents a liquid which can be used in drinks
  */
@@ -173,10 +227,12 @@ public class Liquid {
      * volume of liquid (in liter)
      */
     private double volume;
+
     /**
      * alcoholPercent of liquid (in percent eg. 42)
      */
     private double alcoholPercent;
+
     /**
      * Creates new liquid with given name, volume and
      * alcoholPercent
@@ -188,14 +244,19 @@ public class Liquid {
     public Liquid(String name, double volume, double alcoholPercent) {
         this.name = name;
         checkVolume(volume);
+
         this.volume = volume;
         this.alcoholPercent = alcoholPercent;
     }
    }
+
+
 ```
+
 ## Sources ##
 - https://www.tutorialspoint.com/junit/junit_test_framework.htm
 - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
 - https://www.markdownguide.org/cheat-sheet
 - https://www.makeareadme.com/
 - https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/
+- https://maven.apache.org/guides/mini/guide-configuring-plugins.html
