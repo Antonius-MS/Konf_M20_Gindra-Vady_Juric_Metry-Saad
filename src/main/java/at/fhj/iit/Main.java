@@ -1,5 +1,11 @@
 package at.fhj.iit;
-
+/**
+ * Creates drinks objects and calls their methods
+ *
+ * @author Gerwald Gindra-Vady
+ * @author Valentina Juric
+ * @author Antonius Metry Saad
+ */
 public class Main {
 
     public static void main(String[] args){

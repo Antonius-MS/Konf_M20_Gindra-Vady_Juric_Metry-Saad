@@ -1,7 +1,7 @@
 package at.fhj.iit;
 
 /**
- * represents a simple drink liquid which can be used in drinks
+ * Represents a simple drink liquid which can be used in drinks
  */
 public class SimpleDrink extends Drink{
 
