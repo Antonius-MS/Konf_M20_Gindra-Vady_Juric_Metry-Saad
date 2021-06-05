@@ -111,6 +111,7 @@ public class Coffee extends Drink implements Sellable {
         this.price = liquid.getVolume() * price;
     }
 
+
     /**
      * Gets the price of this coffee
      *

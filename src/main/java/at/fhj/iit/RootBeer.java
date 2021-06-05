@@ -94,7 +94,7 @@ public class RootBeer extends Drink implements Sellable{
      */
     public void printInfo () {
         String beverageKnown = iKnowRootBeer == true ? "known" : "unknown";
-        info = "Please enjoy this " + beverageKnown + " Root Beer called " + name + " with " + liquid.getAlcoholPercent() + " percent alcohol by volume";
+        info =  "Please enjoy this " + beverageKnown + " Root Beer called " + name + " with " + liquid.getAlcoholPercent() + " percent alcohol by volume";
         System.out.println(info);
     }
 
@@ -107,6 +107,7 @@ public class RootBeer extends Drink implements Sellable{
     public void setPrice(int price) {
         this.price = liquid.getVolume() * price;
     }
+
 
     /**
      * Gets the price of this rootbeer
@@ -125,5 +126,6 @@ public class RootBeer extends Drink implements Sellable{
     public void sell() {
         Registrierkasse.drinksToSellList.add(this);
     }
+
 
 }

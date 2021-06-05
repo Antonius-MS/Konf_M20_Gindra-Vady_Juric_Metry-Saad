@@ -1,4 +1,5 @@
 package at.fhj.iit;
+
 /**
  * Creates drinks objects and calls their methods
  *
@@ -7,7 +8,11 @@ package at.fhj.iit;
  * @author Antonius Metry Saad
  */
 public class Main {
-
+    /**
+     * Startpoint of the program
+     *
+     * @param args program arguments
+     */
     public static void main(String[] args){
         seperatorLine();
         //creates a new Coffe Object with the passed parameters
@@ -25,8 +30,12 @@ public class Main {
         RootBeer aAndW = new RootBeer("AW", new Liquid("Lemonade", 0.5, 0), true);
         aAndW.printInfo();
         seperatorLine();
+
     }
 
+    /**
+     * Prints a line
+     */
     public static void seperatorLine(){
         for (int i = 0; i < 100; i++) {
             System.out.printf("-");
