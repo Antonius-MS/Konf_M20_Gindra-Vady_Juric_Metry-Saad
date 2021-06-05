@@ -259,3 +259,4 @@ public class Liquid {
 - https://www.markdownguide.org/cheat-sheet
 - https://www.makeareadme.com/
 - https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/
+- https://maven.apache.org/guides/mini/guide-configuring-plugins.html
