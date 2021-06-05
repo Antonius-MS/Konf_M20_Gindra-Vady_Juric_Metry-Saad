@@ -10,11 +10,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
- * <h1>BeerTest</h1>
- * <h2>Tests the Beer class</h2>
- * carries out tests on all methods from Beer class
- * <p>
- * Last-Change: 31.05.2021
+ * Creates different beers and tests if expected output is the same as actual output
+ *
  * @author Valentina Juric
  */
 @DisplayName("Testing Beer Class")
