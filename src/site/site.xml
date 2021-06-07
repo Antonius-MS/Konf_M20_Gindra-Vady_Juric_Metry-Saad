@@ -7,6 +7,7 @@
 			<item name="README" href="README.html" />
 			<item name="Design Decisions" href="designdecisions.html" />
 			<item name="Test Coverage" href="testcoverage.html" />
+			<item name="Dev Tutorial" href="tutorial.html" />
 		</menu>
 		<menu ref="reports" />
 		<menu ref="parent" />
