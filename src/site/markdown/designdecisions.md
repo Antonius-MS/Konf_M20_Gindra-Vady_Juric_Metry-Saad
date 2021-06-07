@@ -6,12 +6,14 @@ The **ImportantSellInformation** saves the data of the purchase so that the **Re
 
 The **Registrierkasse** takes **drink name and purchase date** as input for the buy method and returns the **information about the purchase**.
 There are three possible return values for the buy method:
+
 - *successful purchase*
 - *drink is not for sale yet*
 - *drink does not exist*
 
 
 The **Registrierkasse** takes **no params or name of seller or purchase data or name of seller and purchase date** (depending on the report method) as input for the report method and returns the **desired sales report**.
+
 - The report methods return a value that is greater or equal (if no drink was sold with the given params) to 0.
   For these implementations we created two branches:
     -  **featureBuyDrinkInRegistrierkasse** for buying and selling drinks
