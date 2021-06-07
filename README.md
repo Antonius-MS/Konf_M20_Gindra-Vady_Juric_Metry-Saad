@@ -253,6 +253,89 @@ public class Liquid {
 
 ```
 
+
+---
+## v3.0
+---
+## Features in v3.0 ##
+- **buy** and **sell** drinks
+- create **reports**
+---
+## Implementation ##
+##### ImportantSellInformation ##### 
+- Author: Antonius Metry Saad
+- Helper class for saving purchase data.
+- This class contains different parameters that give information about the sold drinks.
+- The parameters are set in the constructor. For each parameter there is a getter-method.
+##### Registrierkasse ##### 
+- Authors: Gerwald Gindra-Vady, Antonius Metry Saad, Valentina Juric
+- Manages the sellable drinks and saves the purchase data into a list.
+- Sellable drinks must have the interface Sellable implemented.
+- Saves the purchasing data into a helper class (ImportantSellInformation).
+- This class has two functionalities:
+    - Buy drinks that are on the sales list.
+    - Create reports for:
+        - **Non alcoholic** drinks
+        - **Low alcoholic** drinks
+        - **High alcoholic** drinks
+        - Drinks sold by **specific seller**
+        - Drinks sold on **specific date**
+        - Drinks sold on **specific date and by specific seller**
+##### Sellable ##### 
+Author: Valentina Juric
+Interface for drinks that can be sold.
+Includes all necessary methods for selling and buying drinks & creating reports.
+---
+## Tests ### 
+##### ImportantSellInformationTest ##### 
+- Author: Antonius Metry Saad
+- Carries out tests on all methods from ImportantSellInformationTest class.
+- Amount of Tests: 5
+- Coverage: 100%
+##### RegistrierkasseTest ##### 
+- Author: Valentina Juric
+- Carries out tests on all methods from RegistrierkasseTest class.
+- Amount of Tests: 9
+- Coverage: 100%
+---
+## Branches ##
+##### featureBuyDrinkInRegistrierkasse: ##### 
+- Creator: Valentina Juric
+- Branch for implementing feature buying and selling drinks
+- Methods
+```
+    - buyDrink(String name, String date)
+        - params: drink name, purchase date
+        - returns: purchase state
+```
+##### featureReportsInRegistrierkasse: #####
+- Creator: Antonius Metry Saad
+- Branch for implementing create reports
+- Methods:
+```
+    - reportNonAlcoholicDrinksSales()
+        - returns: total sales of non alcoholic drinks
+    - reportLowAlcoholicDrinks()
+        - returns: total sales of low alcoholic drinks   
+    - reportHighAlcoholicDrinks()
+        - returns: total sales of high alcoholic drinks 
+    - reportDrinksOnDate(String date)
+        - params: date of purchase
+        - returns: total sales of drinks on date
+    - reportDrinksFromPerson(String name)
+        - params: name of the seller
+        - returns: total sales of drinks from seller
+```
+---
+## Changes in pom.xml ##
+- added *maven-project-info-reports-plugin* for maven site documentation
+- added *maven-javadoc-plugin* for java doc within maven site documentation
+- added *jacoco-maven-plugin* for test coverage integration in maven site documentation
+- added *maven-resources-plugin* for using README.md for maven site documentation
+- added information about the developers
+
+---
+
 ## Sources ##
 - https://www.tutorialspoint.com/junit/junit_test_framework.htm
 - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
