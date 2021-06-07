@@ -281,7 +281,9 @@ public class Liquid {
         - Drinks sold by **specific seller**
         - Drinks sold on **specific date**
         - Drinks sold on **specific date and by specific seller**
+   
 ##### Sellable ##### 
+
 Author: Valentina Juric
 Interface for drinks that can be sold.
 Includes all necessary methods for selling and buying drinks & creating reports.
@@ -302,7 +304,7 @@ Includes all necessary methods for selling and buying drinks & creating reports.
 ##### featureBuyDrinkInRegistrierkasse: ##### 
 - Creator: Valentina Juric
 - Branch for implementing feature buying and selling drinks
-- Methods
+- Methods:
 ```
     - buyDrink(String name, String date)
         - params: drink name, purchase date
