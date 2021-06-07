@@ -281,12 +281,11 @@ public class Liquid {
         - Drinks sold by **specific seller**
         - Drinks sold on **specific date**
         - Drinks sold on **specific date and by specific seller**
-   
-##### Sellable ##### 
 
-Author: Valentina Juric
-Interface for drinks that can be sold.
-Includes all necessary methods for selling and buying drinks & creating reports.
+##### Sellable ##### 
+- Author: Valentina Juric
+- Interface for drinks that can be sold.
+- Includes all necessary methods for selling and buying drinks & creating reports.
 ---
 ## Tests ### 
 ##### ImportantSellInformationTest ##### 
