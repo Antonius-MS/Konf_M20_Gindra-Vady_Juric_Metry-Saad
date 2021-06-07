@@ -51,7 +51,7 @@ public class Coffee extends Drink implements Sellable {
     /**
      * Calculates volume of the coffee
      *
-     * @return the volume of coffee in liter
+     * @return the volume of coffee in liters
      */
     @Override
     public double getVolume() {
@@ -69,7 +69,7 @@ public class Coffee extends Drink implements Sellable {
     }
 
     /**
-     * Checks if coffee is alholic
+     * Checks if coffee is alcoholic
      *
      * @return if coffee is alcoholic
      */

@@ -67,6 +67,4 @@ class LiquidTest {
         liquid.setAlcoholPercent(1);
         assertEquals(liquid.getAlcoholPercent(), 1);
     }
-
-
 }

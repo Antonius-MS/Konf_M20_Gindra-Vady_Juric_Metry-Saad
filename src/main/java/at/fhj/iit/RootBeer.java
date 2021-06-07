@@ -1,33 +1,33 @@
 package at.fhj.iit;
 
 /**
- * Concrete class RootBeer to abstract Drink class
+ * Represents a RootBeer, that is a liquid and a subclass to Drink
  *
  * @author Gerwald Gindra-Vady
  */
 public class RootBeer extends Drink implements Sellable{
     /**
-     * price of the rootbeer
+     * price of the root beer
      */
     private double price = -1.0;
 
     /**
-     * knowledge of the beverage RootBeer
+     * knowledge of the beverage root beer
      */
     private boolean iKnowRootBeer;
 
     /**
-     * info about RootBeer
+     * info about root beer
      */
     private String info = "";
 
     /**
-     * liquid inside of the RootBeer
+     * liquid inside of the root beer
      */
     protected Liquid liquid;
 
     /**
-     * Creates a new Rootbeer
+     * Creates a new root beer
      *
      * @param name name of the drink
      * @param liquid liquid used to make this drink
@@ -40,29 +40,29 @@ public class RootBeer extends Drink implements Sellable{
     }
 
     /**
-     * Returns name of liquid rootBeer
+     * Returns name of liquid root beer
      *
      * @return the name as String
      */
     public String getName() { return name; }
 
     /**
-     * Returns if rootBeer is known
+     * Returns if root beer is known
      *
      * @return if known or not
      */
     public boolean getIKnowRootBeer() { return this.iKnowRootBeer; }
 
     /**
-     * Returns volume of liquid rootBeer
+     * Returns volume of liquid root beer
      *
-     * @return the volume in litre
+     * @return the volume in litres
      */
     @Override
     public double getVolume() { return liquid.getVolume(); }
 
     /**
-     * Returns alcohol volume percent of liquid rootBeer
+     * Returns alcohol volume percent of liquid root beer
      *
      * @return alcohol volume percent
      */
@@ -70,9 +70,9 @@ public class RootBeer extends Drink implements Sellable{
     public double getAlcoholPercent () { return liquid.getAlcoholPercent(); }
 
     /**
-     * Returns if RootBeer is alcoholic
+     * Returns if root beer is alcoholic
      *
-     * @return if RootBeer is alcoholic
+     * @return if root beer is alcoholic
      */
     @Override
     public boolean isAlcoholic () {
@@ -83,14 +83,14 @@ public class RootBeer extends Drink implements Sellable{
     }
 
     /**
-     * Returns Info of RootBeer
+     * Returns info of root beer
      *
      * @return info String
      */
     public String getInfo () { return this.info; }
 
     /**
-     * Prints information about Root_Beer
+     * Prints information about root beer
      */
     public void printInfo () {
         String beverageKnown = iKnowRootBeer == true ? "known" : "unknown";
@@ -99,9 +99,9 @@ public class RootBeer extends Drink implements Sellable{
     }
 
     /**
-     * Sets the price of this rootbeer
+     * Sets the price of this root beer
      *
-     * @param price of the rootbeer
+     * @param price of the root beer
      */
     @Override
     public void setPrice(int price) {
@@ -110,9 +110,9 @@ public class RootBeer extends Drink implements Sellable{
 
 
     /**
-     * Gets the price of this rootbeer
+     * Gets the price of this root beer
      *
-     * @return price for this rootbeer
+     * @return price for this root beer
      */
     @Override
     public double getPrice() {
@@ -120,12 +120,11 @@ public class RootBeer extends Drink implements Sellable{
     }
 
     /**
-     * Sell this rootbeer
+     * Sell this root beer
      */
     @Override
     public void sell() {
         Registrierkasse.drinksToSellList.add(this);
     }
-
 
 }

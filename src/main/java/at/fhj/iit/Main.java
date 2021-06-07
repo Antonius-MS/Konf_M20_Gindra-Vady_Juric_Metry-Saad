@@ -9,7 +9,7 @@ package at.fhj.iit;
  */
 public class Main {
     /**
-     * Startpoint of the program
+     * Starting point of the program
      *
      * @param args program arguments
      */

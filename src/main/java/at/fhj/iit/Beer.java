@@ -79,7 +79,7 @@ public class Beer extends Drink implements Sellable{
     /**
      * Calculates volume of the beer
      *
-     * @return the volume of beer in liter
+     * @return the volume of beer in liters
      */
     @Override
     public double getVolume() {

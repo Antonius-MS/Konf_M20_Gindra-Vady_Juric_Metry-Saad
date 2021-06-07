@@ -43,7 +43,7 @@ class SimpleDrinkTest {
     }
 
     @Test
-    @DisplayName("Testing isAlcholic getter of SimpleDrink")
+    @DisplayName("Testing isAlcoholic getter of SimpleDrink")
     void isAlcoholic() {
         assertEquals(drink.isAlcoholic(), true);
     }

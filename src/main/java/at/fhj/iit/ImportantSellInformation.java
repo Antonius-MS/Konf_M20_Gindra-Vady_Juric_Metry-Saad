@@ -5,7 +5,7 @@ package at.fhj.iit;
  *
  * @author Antonius Metry Saad
  */
-public class ImportantSellInformation{
+public class ImportantSellInformation {
     private String drinkName = "";
     private double price = 0.0;
     private double alcoholPercentage = 0.0;
@@ -34,7 +34,7 @@ public class ImportantSellInformation{
      *
      * @return drink name
      */
-    public String getDrinkName(){return drinkName;}
+    public String getDrinkName(){return drinkName; }
 
     /**
      * Gets the name of the seller
@@ -71,6 +71,4 @@ public class ImportantSellInformation{
     public double getAlcoholPercentage() {
         return alcoholPercentage;
     }
-
-
 }

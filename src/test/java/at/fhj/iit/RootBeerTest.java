@@ -26,9 +26,9 @@ public class RootBeerTest {
     @BeforeEach
     void setup() {
         Registrierkasse.drinksToSellList = new ArrayList<>();
-        aW = new RootBeer("AW", new Liquid("Lemonade", 0.5, 0), true);
-        bargs = new RootBeer("Bargs", new Liquid("Lemonade", 0.25, 0),true);
-        mug = new RootBeer("MUG", new Liquid("Limonade", 0.3, 0),false);
+        aW = new RootBeer("AW", new Liquid("Soft Drink", 0.5, 0), true);
+        bargs = new RootBeer("Bargs", new Liquid("Soft Drink", 0.25, 0),true);
+        mug = new RootBeer("MUG", new Liquid("Soft Drink", 0.3, 0),false);
     }
 
     @Test

@@ -31,9 +31,9 @@ public class Registrierkasse {
     public static ArrayList<Sellable>  drinksToSellList;
 
     /**
-     * Creates new Registrierkasse
+     * Creates new Registrierkasse object
      */
-    public Registrierkasse(){
+    public Registrierkasse() {
         importantSellInformationList = new ArrayList<ImportantSellInformation>();
         drinksToSellList = new ArrayList<Sellable>();
     }
@@ -164,14 +164,13 @@ public class Registrierkasse {
     public double reportDrinksFromPersonAndOnDate(String name, String date) {
         double sales = 0.0;
 
-        for(ImportantSellInformation soldDrink : importantSellInformationList) {
-            if(soldDrink.getSellerName().equals(name) && soldDrink.getDate().equals(date))
+        for (ImportantSellInformation soldDrink : importantSellInformationList) {
+            if (soldDrink.getSellerName().equals(name) && soldDrink.getDate().equals(date))
                 sales += soldDrink.getPrice();
         }
 
         return sales;
     }
-
 }
 
 
