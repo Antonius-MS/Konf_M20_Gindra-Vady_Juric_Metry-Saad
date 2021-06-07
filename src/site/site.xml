@@ -2,12 +2,11 @@
 	<publishDate position="right"/>
 	<version position="left"/>
 	<body>
-
 		<menu name="Overview">
 			<item name="Introduction" href="index.html" />
 			<item name="README" href="README.html" />
 			<item name="Design Decisions" href="designdecisions.html" />
-
+			<item name="Test Coverage" href="testcoverage.html" />
 		</menu>
 		<menu ref="reports" />
 		<menu ref="parent" />
